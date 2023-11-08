@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo apt update && sudo apt upgrade -y
+sudo apt -y install vim mpv vlc syncthing firefox alacritty blueman gnome-bluetooth htop
