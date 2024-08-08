@@ -9,6 +9,9 @@ git config --global user.email myemail
 git config --global github.user myusername
 git config --global github.token mytoken
 
+use ssh-keygen to create a key, then add it to profile
+use only ssh repo links to clone
+
 ## Firefox setup
 copy profile root directory from old system to new
 
