@@ -1,4 +1,6 @@
 #!/bin/bash
 
 sudo apt update && sudo apt upgrade -y
-sudo apt -y install vim mpv vlc syncthing firefox alacritty blueman gnome-bluetooth htop xclip
+sudo apt -y install neovim mpv vlc syncthing firefox alacritty blueman gnome-bluetooth htop xclip timeshift kdeconnect
+
+flatpak install flathub com.usebottles.bottles com.discordapp.Discord com.spotify.Client md.obsidian.Obsidian org.qbittorrent.qBittorrent org.keepassxc.KeePassXC
