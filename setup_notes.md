@@ -20,3 +20,7 @@ else
   sh -c "$(wget -O- https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
 fi
 ~~~
+
+## Gnome extensions
+- install the extensions program (if not present)
+- https://extensions.gnome.org/extension/906/sound-output-device-chooser/
