@@ -25,5 +25,5 @@ fi
 ~~~
 
 ## Gnome extensions
-- install the extensions program (if not present)
+- install gnome extension manager (if not present)
 - https://extensions.gnome.org/extension/906/sound-output-device-chooser/
