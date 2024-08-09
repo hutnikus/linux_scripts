@@ -2,3 +2,12 @@
 
 sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 numlockx on
+
+gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Super>f']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys email "[]"
+
+
+
+
+
