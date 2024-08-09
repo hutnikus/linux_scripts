@@ -96,6 +96,7 @@ compdef _directories md
 alias tree='tree -a -I .git'
 alias update='sudo apt update && sudo apt upgrade -y && flatpak update -y'
 alias clip='xclip -selection clipboard'
+alias ll='ls -thor'
 
 # Add flags to existing aliases.
 alias ls="${aliases[ls]:-ls} -A"
