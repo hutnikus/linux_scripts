@@ -31,7 +31,10 @@ fi
 ## Firewall
 - firewall frontend is called gufw, it is disabled by default on pop_os
 
-
+## Resolv
+- while using pihole and whatnot I disabled systemd-resolved
+- I also removed symlink /etc/resolv.conf -> /run/systemd/resolve/stub-resolv.conf
+- to bring it back, I have to create the symlink and reenable the service
 
 
 
