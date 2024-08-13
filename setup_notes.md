@@ -27,3 +27,11 @@ fi
 ## Gnome extensions
 - install gnome extension manager (if not present)
 - https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+
+## Firewall
+- firewall frontend is called gufw, it is disabled by default on pop_os
+
+
+
+
+
