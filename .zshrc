@@ -94,7 +94,7 @@ compdef _directories md
 
 
 # Define some user variables
-export LESS='-iRFMx4'
+export LESS='-iRMx4'
 
 
 # Define aliases.
