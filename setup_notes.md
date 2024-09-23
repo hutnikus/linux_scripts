@@ -23,6 +23,8 @@ else
   sh -c "$(wget -O- https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
 fi
 ~~~
+- create link to .zshrc from this repo `ln -s script_folder/.zshrc ~/.zshrc`
+
 
 ## Gnome extensions
 - install gnome extension manager (if not present)
@@ -36,5 +38,7 @@ fi
 - I also removed symlink /etc/resolv.conf -> /run/systemd/resolve/stub-resolv.conf
 - to bring it back, I have to create the symlink and reenable the service
 
-
+## Default editor
+- `sudo update-alternatives --config editor`
+- opens interactive menu
 
