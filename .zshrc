@@ -103,7 +103,7 @@ alias update='sudo apt update && sudo apt upgrade -y && flatpak update -y'
 alias clip='xclip -selection clipboard'
 alias ll='ls -thor'
 alias wttr='curl -s "wttr.in/$(echo '\''Brno\nBratislava\nSvaty_Jur'\'' | fzf)" | sed '\''$d'\'''
-
+alias gpush='git add . && git commit -m "changes" && git push'
 
 
 

@@ -9,6 +9,9 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys email "[]"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-mkdir ~/.config/autostart && cp $SCRIPT_DIR/autostart/* ~/.config/autostart/
-
+mkdir ~/.config/autostart
+cp $SCRIPT_DIR/autostart/* ~/.config/autostart/
+# Disable Pop_Shop daemon
+cp /etc/xdg/autostart/io.elementary.appcenter-daemon.desktop ~/.config/autostart/
+echo "X-GNOME-Autostart-enabled=false" >> ~/.config/autostart/io.elementary.appcenter-daemon.desktop
 
