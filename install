@@ -14,3 +14,11 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft-archive-keyring.gp
 sudo apt update
 
 sudo apt -y install code
+
+echo "INSTALLING RUST"
+curl https://sh.rustup.rs -sSf | sh
+
+cargo install vivid
+
+
+

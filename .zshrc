@@ -95,6 +95,8 @@ compdef _directories md
 
 # Define some user variables
 export LESS='-iRMx4'
+export LS_COLORS="$(vivid generate nord)"
+
 
 
 # Define aliases.
