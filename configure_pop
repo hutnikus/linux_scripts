@@ -10,6 +10,15 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Super>f']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys email "[]"
 
+# custom shortcuts
+# htop
+SHORTCUT_PATH="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH} name "Open htop"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH} command "gnome-terminal -- bash -c 'htop'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH} binding "<Primary><Shift>Escape"
+
+
+
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # deal with startup apps
