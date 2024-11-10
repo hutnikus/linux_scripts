@@ -6,7 +6,7 @@ echo "DOWNLOADING APT PACKAGES"
 sudo apt -y install neovim mpv vlc syncthing firefox alacritty blueman gnome-bluetooth htop xclip timeshift kdeconnect zsh smartmontools btop neofetch gnome-shell-extension-manager numlockx python3-pip gufw software-properties-common apt-transport-https curl tree openjdk-11-jdk
 
 echo "DOWNLOADING FLATPAK PACKAGES"
-flatpak install -y flathub com.usebottles.bottles com.discordapp.Discord com.spotify.Client md.obsidian.Obsidian org.qbittorrent.qBittorrent org.keepassxc.KeePassXC
+flatpak install -y flathub com.usebottles.bottles com.discordapp.Discord com.spotify.Client md.obsidian.Obsidian org.qbittorrent.qBittorrent org.keepassxc.KeePassXC kde-spectacle
 
 echo "SETTING UP MICROSOFT REPOS"
 curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-archive-keyring.gpg

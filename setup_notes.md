@@ -42,3 +42,6 @@ fi
 - `sudo update-alternatives --config editor`
 - opens interactive menu
 
+## Configure screenshot utility
+- in the installation script, I have added kde-spectacle, which is as to-the-point as needed
+- however, the shortcuts cannot be set programatically, so set them visualy through the program
