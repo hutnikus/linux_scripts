@@ -108,7 +108,7 @@ alias wttr='curl -s "wttr.in/$(echo '\''Brno\nBratislava\nSvaty_Jur'\'' | fzf)" 
 alias img='eog'
 
 # Define custom functions
-gpush() {
+gpush() { 
     if [ $# -eq 0 ]; then
         commit_message="changes"
     else
