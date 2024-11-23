@@ -9,13 +9,16 @@ numlockx on
 gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Super>f']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys email "[]"
+gsettings set org.gnome.mutter.keybindings toggle-tiled-right "[]"
+gsettings set org.gnome.mutter.keybindings toggle-tiled-left "[]" 
+
 
 # custom shortcuts
 # htop
-SHORTCUT_PATH="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH} name "Open htop"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH} command "gnome-terminal -- bash -c 'htop'"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH} binding "<Primary><Shift>Escape"
+SHORTCUT_PATH="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH}0/ name "Open htop"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH}1/ command "gnome-terminal -- bash -c 'htop'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH}2/ binding "<Primary><Shift>Escape"
 
 
 
