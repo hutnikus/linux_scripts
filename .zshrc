@@ -95,7 +95,7 @@ compdef _directories md
 
 # Define some user variables
 export LESS='-iRMx4'
-export LS_COLORS="$(vivid generate nord)"
+export LS_COLORS="$(vivid generate one-dark)"
 
 
 
@@ -105,8 +105,19 @@ alias update='sudo apt update && sudo apt upgrade -y && flatpak update -y'
 alias clip='xclip -selection clipboard'
 alias ll='ls -thor'
 alias wttr='curl -s "wttr.in/$(echo '\''Brno\nBratislava\nSvaty_Jur'\'' | fzf)" | sed '\''$d'\'''
-alias gpush='git add . && git commit -m "changes" && git push'
+alias img='eog'
 
+# Define custom functions
+gpush() {
+    if [ $# -eq 0 ]; then
+        commit_message="changes"
+    else
+        commit_message="$*"
+    fi
+    git add .
+    git commit -m "$commit_message"
+    git push
+}
 
 
 
