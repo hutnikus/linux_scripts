@@ -5,7 +5,7 @@ sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 # set numlock to be on
 numlockx on
 
-# gnome shortcuts
+# gnome keyboard shortcuts
 gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Super>f']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys email "[]"
@@ -13,7 +13,7 @@ gsettings set org.gnome.mutter.keybindings toggle-tiled-right "[]"
 gsettings set org.gnome.mutter.keybindings toggle-tiled-left "[]" 
 
 
-# custom shortcuts
+# custom keyboard shortcuts
 # htop
 SHORTCUT_PATH="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:${SHORTCUT_PATH}0/ name "Open htop"
