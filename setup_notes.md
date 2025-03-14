@@ -3,6 +3,9 @@
 The following file contains notes that may or may not be needed depending on the installation or the way the system is installed.
 Some notes are here because some external interaction is needed (e.g. moving private files via usb or setting up a dual boot)
 
+## Syncthing
+at address http://127.0.0.1:8384/ when running by default
+
 ## Git setup
 git config --global user.name myusername
 git config --global user.email myemail
