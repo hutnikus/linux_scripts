@@ -37,4 +37,10 @@ mkdir -p ~/.local/share/applications
 cp $SCRIPT_DIR/applications/* ~/.local/share/applications
 
 
+echo '# Rule for when switching to battery                                                                                                                                                             22:27:52
+SUBSYSTEM=="power_supply",ENV{POWER_SUPPLY_ONLINE}=="0",RUN+="/usr/bin/system76-power profile battery"' > /etc/udev/rules.d/61-onbattery.rules
+echo '# Rule for when switching to power supply
+SUBSYSTEM=="power_supply",ENV{POWER_SUPPLY_ONLINE}=="1",RUN+="/usr/bin/system76-power profile performance"' > /etc/udev/rules.d/62-onpower.rules
+sudo udevadm control --reload-rules && sudo udevadm trigger
+
 

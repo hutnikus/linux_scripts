@@ -45,3 +45,77 @@ fi
 - `sudo update-alternatives --config editor`
 - opens interactive menu
 
+## Hibernate
+create a swap partition, should be a bit bigger then the actual RAM.
+why even encrypt the thing? 
+
+```bash
+sudo swapoff -a
+sudo cryptsetyp luksClose cryptswap
+
+sudo cruptsetup luksErase /dev/nvme0n1p2 #if correct partition name
+sudo mkswap /dev/ncme0n1p2
+sudo swapon /dev/nvme0n1p2
+
+swapon --show # check if on
+
+#get UUID
+blkid | grep nvme0n1p2
+
+sudo nvim /etc/kernelstub/configuration
+# add "resume=UUID=actual_uuid_that_you_get" to "kernel_options"
+sudo kernelstub -v
+
+sudo nvim /etc/initramfs-tools/conf.d/resume
+# add RESUME=UUID=your-new-swap-uuid
+
+sudo update-initramfs -u -k all
+
+
+sudo nano /etc/fstab
+# replace /dev/mapper/cryptswap  none  swap  defaults  0  0 with
+UUID=your-new-swap-uuid none swap sw 0 0
+
+sudo swapoff -a
+sudo swapon -a
+
+# try this
+sudo reboot
+sudo systemctl hibernate
+```
+
+### Bind power button
+create script to hibernate
+
+```bash
+sudo nano /usr/local/bin/power-button-action.sh
+```
+
+add this
+```bash
+#!/bin/bash
+systemctl hibernate
+
+```
+
+continue with this
+```bash
+sudo chmod +x /usr/local/bin/power-button-action.sh
+
+acpi_listen
+# power button press should give line starting with button/power
+
+sudo nano /etc/acpi/events/powerbutton
+
+## add these lines to this
+event=button/power
+action=/usr/local/bin/power-button-action.sh
+
+
+sudo systemctl restart acpid
+
+```
+
+now system should hibernate on power button press
+
+
