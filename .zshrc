@@ -106,6 +106,9 @@ alias clip='xclip -selection clipboard'
 alias ll='ls -thor'
 alias wttr='curl -s "wttr.in/$(echo '\''Brno\nBratislava\nSvaty_Jur'\'' | fzf)" | sed '\''$d'\'''
 alias img='eog'
+alias nv='nvim'
+alias todo='nvim ~/TODO.md'
+
 
 # Define custom functions
 gpush() { 
