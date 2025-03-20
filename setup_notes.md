@@ -121,3 +121,5 @@ now system should hibernate on power button press
 ## Wayland
 to enable wayland on pop_os, you need to edit `/etc/gdm3/custom.conf` and change WaylandEnable=true
 then restart the service `sudo systemctl restart gdm3`
+
+-> to get rid of phantom windows, disable the "desktop icons" extension in extension manager
