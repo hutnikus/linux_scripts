@@ -124,6 +124,10 @@ then restart the service `sudo systemctl restart gdm3`
 
 -> to get rid of phantom windows, disable the "desktop icons" extension in extension manager
 
+# Unison
+To set up synchronization, you can create a `~/.unison/sync_name.prf` file.
+To start the sync process based on that profile, run `unison sync_name`
+
 # Useful commands
 
 copy large amount of files
