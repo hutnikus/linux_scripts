@@ -123,3 +123,18 @@ to enable wayland on pop_os, you need to edit `/etc/gdm3/custom.conf` and change
 then restart the service `sudo systemctl restart gdm3`
 
 -> to get rid of phantom windows, disable the "desktop icons" extension in extension manager
+
+# Useful commands
+
+copy large amount of files
+```bash
+rsync -avh --info=progress2 source target
+```
+play sound
+```bash
+canberra-gtk-play -i complete/bell/dialog-information/dialog-warning
+```
+auto-mount drive
+```bash
+udisksctl mount -b /dev/sdb1
+```
