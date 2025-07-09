@@ -108,6 +108,7 @@ alias wttr='curl -s "wttr.in/$(echo '\''Brno\nBratislava\nSvaty_Jur'\'' | fzf)" 
 alias img='eog'
 alias nv='nvim'
 alias todo='nvim ~/TODO.md'
+alias alert='canberra-gtk-play -i complete'
 
 
 # Define custom functions
