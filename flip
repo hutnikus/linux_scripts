@@ -1,0 +1,27 @@
+#!/bin/bash
+# flip - Flip an image horizontally while preserving metadata
+
+if [ $# -ne 1 ]; then
+    echo "Usage: flip /path/to/picture.jpg"
+    exit 1
+fi
+
+# Get input file and details
+INPUT="$1"
+DIR="$(dirname "$INPUT")"
+BASENAME="$(basename "$INPUT")"
+EXT="${BASENAME##*.}"
+NAME="${BASENAME%.*}"
+OUTPUT="$DIR/${NAME}_flipped.$EXT"
+
+# Flip image directly to output (pixels only)
+convert "$INPUT" -flip "$OUTPUT"
+
+# Copy metadata from original to flipped image
+exiftool -overwrite_original -TagsFromFile "$INPUT" "$OUTPUT" >/dev/null 2>&1
+
+# Remove exiftool backup file if it appears
+[ -f "${OUTPUT}_original" ] && rm -f "${OUTPUT}_original"
+
+echo "Flipped image saved as: $OUTPUT"
+
