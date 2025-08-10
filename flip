@@ -17,8 +17,15 @@ OUTPUT="$DIR/${NAME}_flipped.$EXT"
 # Flip image directly to output (pixels only)
 convert "$INPUT" -flip "$OUTPUT"
 
-# Copy metadata from original to flipped image
-exiftool -overwrite_original -TagsFromFile "$INPUT" "$OUTPUT" >/dev/null 2>&1
+# Copy ALL metadata (EXIF, IPTC, XMP, GPS, dates, etc.) from original
+exiftool -overwrite_original \
+    -TagsFromFile "$INPUT" \
+    -all:all \
+    -unsafe \
+    "$OUTPUT" >/dev/null 2>&1
+
+# Match the file system timestamps (created/modified) to original
+touch -r "$INPUT" "$OUTPUT"
 
 # Remove exiftool backup file if it appears
 [ -f "${OUTPUT}_original" ] && rm -f "${OUTPUT}_original"
