@@ -109,7 +109,7 @@ alias img='eog'
 alias nv='nvim'
 alias todo='nvim ~/TODO.md'
 alias alert='canberra-gtk-play -i complete'
-
+alias py='python3'
 
 # Define custom functions
 gpush() { 
