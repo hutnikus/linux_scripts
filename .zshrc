@@ -101,7 +101,7 @@ export LS_COLORS="$(vivid generate one-dark)"
 
 # Define aliases.
 alias tree='tree -a -I .git'
-alias update='sudo apt update && sudo apt upgrade -y && flatpak update -y'
+alias update='echo "UPDATING APT" && sudo apt update && sudo apt upgrade -y && echo "UPDATING FLATPAK" && flatpak update -y'
 alias clip='xclip -selection clipboard'
 alias ll='ls -thor'
 alias wttr='curl -s "wttr.in/$(echo '\''Brno\nBratislava\nSvaty_Jur'\'' | fzf)" | sed '\''$d'\'''
