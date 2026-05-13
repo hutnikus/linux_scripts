@@ -45,6 +45,10 @@ fi
 - `sudo update-alternatives --config editor`
 - opens interactive menu
 
+## Default termina
+- `sudo update-alternatives --config x-terminal-emulator`
+- same as with editor
+
 ## Hibernate
 create a swap partition, should be a bit bigger then the actual RAM.
 why even encrypt the thing? 
